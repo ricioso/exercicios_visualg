@@ -1,0 +1,61 @@
+// Disciplina : [Linguagem e Lógica de Programação]
+// Professor : Antonio Carlos Nicolodi
+// Arquivo com um algoritmo: Semnome.alg
+// Data de impressão: 28/07/2023
+  Algoritmo "Votos"
+  // Disciplina : [Linguagem e Lógica de Programação]
+  // Professor : Isabelle Mendes
+  // Descrição : Aqui você descreve o que o programa faz! (função)
+  // Autor(a) : Maurício Oliveira
+  // Data atual : 28/07/2023
+  Var
+  // Seção de Declarações das variáveis
+  pVotoNulo,pVotoValido,pVotoBranco,eleitores,votosBrancos,votosNulos,votosValidos,percentual:real
+
+  Inicio
+  // Seção de Comandos, procedimento, funções, operadores, etc...
+  escreval(" ====  Digite os dados da eleição:  ===  ")
+  escreval("")
+  escreva("Digite a quantidade de eleitores: ")
+  leia(eleitores)
+  escreva("Digite a quantidade de votos Brancos: ")
+  leia(votosBrancos)
+  
+  
+  se votosBrancos > eleitores entao
+    limpatela
+    escreva("ATENÇÃO>>> A qtd de votos Brancos não pode ser maior que a quantidade de eleitores! ")
+
+  senao
+    
+     escreva("Digite a quantidade de votos Nulos: ")
+     leia(votosNulos)
+    
+  se votosNulos > eleitores entao
+       limpatela
+       escreva("ATENÇÃO>>> A qtd de votos nulos não pode ser maior que a quantidade de eleitores:")
+  senao
+
+  votosValidos<-(eleitores-(votosBrancos+votosNulos))
+
+
+  pVotoNulo<-(votosNulos/eleitores)*100
+  pVotoValido<-(votosValidos/eleitores)*100
+  pVotoBranco<-(votosBrancos/eleitores)*100
+  
+  
+
+     
+  limpatela
+  escreval(" ===  Resultado ===  ")
+  escreval("")
+  escreva("Total de eleitores: ",eleitores)
+  escreval("")
+  escreval("")
+  escreval(votosBrancos," = Votos Brancos: ",pVotoBranco," %")
+  escreval(votosNulos," = Votos Nulos: ",pVotoNulo," %")
+  escreval(votosValidos," = Votos Validos: ",pVotovalido," %")
+   fimse
+   fimse
+
+  Fimalgoritmo
