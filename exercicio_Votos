@@ -20,9 +20,21 @@
   leia(eleitores)
   escreva("Digite a quantidade de votos Brancos: ")
   leia(votosBrancos)
+  
+  
+  se votosBrancos > eleitores entao
+    limpatela
+    escreva("ATENÇÃO>>> A qtd de votos Brancos não pode ser maior que a quantidade de eleitores! ")
 
-  escreva("Digite a quantidade de votos Nulos: ")
-  leia(votosNulos)
+  senao
+    
+     escreva("Digite a quantidade de votos Nulos: ")
+     leia(votosNulos)
+    
+  se votosNulos > eleitores entao
+       limpatela
+       escreva("ATENÇÃO>>> A qtd de votos nulos não pode ser maior que a quantidade de eleitores:")
+  senao
 
   votosValidos<-(eleitores-(votosBrancos+votosNulos))
 
@@ -32,14 +44,7 @@
   pVotoBranco<-(votosBrancos/eleitores)*100
   
   
-  se votosBrancos > eleitores entao
-  limpatela
-   escreva("ATENÇÃO>>> A qtd de votos Brancos não pode ser maior que a quantidade de eleitores! ")
-    senao
-      se votosNulos > eleitores entao
-      limpatela
-       escreva("ATENÇÃO>>> A qtd de votos nulos não pode ser maior que a quantidade de eleitores:")
-     senao
+
      
   limpatela
   escreval(" ===  Resultado ===  ")
@@ -47,9 +52,9 @@
   escreva("Total de eleitores: ",eleitores)
   escreval("")
   escreval("")
-  escreval(votosBrancos,"= Votos Brancos: ",pVotoBranco," %")
-  escreval(votosNulos,"= Votos Nulos: ",pVotoNulo," %")
-  escreval(votosValidos,"= Votos Validos: ",pVotovalido," %")
+  escreval(votosBrancos," = Votos Brancos: ",pVotoBranco," %")
+  escreval(votosNulos," = Votos Nulos: ",pVotoNulo," %")
+  escreval(votosValidos," = Votos Validos: ",pVotovalido," %")
    fimse
    fimse
 
